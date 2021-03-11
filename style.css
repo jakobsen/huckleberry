@@ -7,6 +7,84 @@ html,
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  /* I guess this is how we have to set a base style of 18px,
+  even though it overrides user preferences? */
+  font-size: 18px;
 }
 
 /* Add styles here! */
+/* Color variables */
+:root {
+  --primary: hsl(160deg, 100%, 30%);
+  --secondary-light: hsl(45deg, 100%, 50%);
+  --secondary-dark: hsl(45deg, 100%, 40%);
+  --black: hsl(0deg, 0%, 0%);
+  --very-dark: hsl(0deg, 0%, 10%);
+  --dark: hsl(0deg, 0%, 30%);
+  --medium: hsl(0deg, 0%, 40%);
+  --light: hsl(0deg, 0%, 60%);
+  --white: hsl(0deg, 0%, 100%);
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+strong {
+  color: var(--primary);
+}
+
+.max-width-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 700px;
+}
+
+header {
+  padding-bottom: 32px;
+  border-bottom: 8px solid var(--medium);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 48px;
+}
+
+.intro-chunk {
+  padding: 128px 32px 0;
+  font-size: 1.25rem;
+  max-width: 400px;
+}
+
+.intro-chunk p {
+  margin-bottom: 32px;
+}
+
+main {
+  background-color: var(--light);
+  padding-top: 96px;
+  /* Have trouble finding a good way to fill remaining space without flexbox */
+  height: 55%;
+}
+
+.card {
+  background-color: var(--white);
+  border-bottom: 8px solid var(--medium);
+  padding: 8px 32px;
+  margin-left: -16px;
+  max-width: 640px;
+}
+
+.indented-heading {
+  background-color: var(--secondary-light);
+  border-bottom: 8px solid var(--secondary-dark);
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 16px 32px;
+  margin-left: -32px;
+}
